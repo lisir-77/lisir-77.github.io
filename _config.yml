@@ -1,0 +1,44 @@
+title: 您的博客名称
+description: 这是一个关于技术、生活和思考的个人博客。
+url: "https://www.yourdomain.com" # 您的自定义域名
+baseurl: "" # 如果部署在子路径下，例如 yourdomain.com/blog，则为 "/blog"
+permalink: /:categories/:year/:month/:day/:title/ # 友好的 URL 结构，有利于 SEO
+timezone: Asia/Shanghai # 设置时区
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'highlight'
+
+# 默认值
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "您的名字"
+      image: "/assets/images/default-post-hero.jpg" # 默认文章图片
+      alt_text: "默认文章图片描述"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap # 自动生成 sitemap.xml，有利于 SEO
+  - jekyll-seo-tag # 自动生成 SEO 相关的 meta 标签
+
+# 排除文件（不编译到网站中）
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.md
