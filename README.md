@@ -11,3 +11,6 @@ hexo new post 文章名
 ```bash
 hexo g
 ```
+![标签](URL)
+
+<img src='URL' alt='标签'></img>
