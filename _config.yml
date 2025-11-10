@@ -103,3 +103,8 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+#订阅RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: false
